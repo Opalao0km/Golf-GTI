@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head> 
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tabelas em html</title>
-  <link rel="stylesheet" href="./css/design.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabelas em html</title>
+    <link rel="stylesheet" href="./css/design.css" />
   </head>
   <body>
-    <!-- Segunda Tabela-->
-    <h1>SEGUNDA TABELA</h1>
+    <!-- Primeira Tabela-->
     <table>
+      <caption>
+        Tabela mesclada
+      </caption>
       <tr>
         <td rowspan="3">1</td>
         <td>2</td>
@@ -24,9 +26,11 @@
         <td>6</td>
       </tr>
     </table>
-    <!-- Terceira Tabela-->
-    <h1>TERCEIRA TABELA</h1>
+    <!-- Segunda Tabela-->
     <table>
+      <caption>
+        Tabela mesclada 2
+      </caption>
       <tr>
         <td>8</td>
         <td>3</td>
@@ -45,9 +49,11 @@
         <td colspan="2">2</td>
       </tr>
     </table>
-    <!-- Quarta Tabela-->
-    <h1>QUARTA TABELA</h1>
+    <!-- Terceira Tabela-->
     <table>
+      <caption>
+        Tabela mesclada 3
+      </caption>
       <tr>
         <td colspan="2">6</td>
         <td rowspan="3">1</td>
@@ -65,5 +71,49 @@
         <td colspan="4">2</td>
       </tr>
     </table>
+    <!-- Tal do Formulário-->
+    <main>
+      <form method="POST" action="" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Cadastro</legend>
+          <div>
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" placeholder="josé" />
+          </div>
+          <div>
+            <label for="email">Email: </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="jose@jose.com.br"
+              required
+            />
+            <br />
+          </div>
+          <div>
+            <label for="sexo">Masculino</label>
+            <input type="radio" name="sexo" value="Masculino" />
+            <label for="sexo">Feminino</label>
+            <input type="radio" name="sexo" value="Feminino" />
+          </div>
+          <label for="estado">Estado/Cidade:</label>
+          <select name="Estado[]" id="Estado" required>
+            <option></option>
+            <option value="1">Minas Gerais</option>
+            <option value="2">São Paulo</option>
+            <option value="3">Rio de Janeiro</option>
+          </select>
+          <input type="tel" required /><br />
+          <label for="arquivo"> Selecione um arquivo</label>
+          <input type="file" name="arquivo[]" multiple /><br />
+          <br />
+          <div>
+            <label for="sugestão">Sugestão:</label> <br />
+            <textarea type="text" name="mensagem" required> </textarea>
+          </div>
+          <input type="image" src="./image/ícone.png">
+        </fieldset>
+      </form>
+    </main>
   </body>
 </html>
